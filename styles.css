@@ -97,7 +97,8 @@ body {
 	flex-direction: column;
 	gap: 20px;
 	padding: 32px;
-	background-color: rgb(22, 146, 211);
+	background-color: rgb(22, 146, 212);
+    justify-content: flex-start;
 }
 
 .sidebar svg {
@@ -105,6 +106,7 @@ body {
 	height: 30px;
 	fill: white;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 .sidebar span {
@@ -164,6 +166,12 @@ a:hover::before {
 	font-size: 1.6rem;
 	font-family: var(--montserrat);
 	color: white;
+}
+
+.sidebar-dashboard svg {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
 }
 
 /**********/
@@ -258,8 +266,8 @@ a:hover::before {
 }
 
 .header-bottom-left img {
-    width: 60px;
-	height: 60px;
+    width: 75px;
+	height: 75px;
 	border-radius: 50%;
     cursor: pointer;
 }
@@ -281,7 +289,7 @@ a:hover::before {
 }
 
 .header-bottom-right button {
-    width: 100px;
+    width: 125px;
     height: 40px;
     border-radius: 25px;
     outline: none;
@@ -310,18 +318,24 @@ a:hover::before {
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	margin-top: 35px;
+    font-family: var(--montserrat);
+    font-size: 20px;
 }
 
 .announcements-title {
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
 	margin-top: 35px;
+    font-family: var(--montserrat);
+    font-size: 20px;
 }
 
 .trending-title {
 	grid-column: 2 / 3;
 	grid-row: 3 / 4;
 	margin-top: 35px;
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
 }
 
 .cards {
@@ -344,10 +358,26 @@ a:hover::before {
 	background-color: white;
 }
 
+.card-content h4 {
+    font-size: 1.1rem;
+}
+
+.card-content p {
+    color: rgb(99, 99, 99);
+    font-size: 0.95rem;
+}
+
+.card-links img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 .card .card-links {
 	display: flex;
 	justify-content: flex-end;
 	align-self: end;
+    gap: 32px;
 }
 
 .announcements {
@@ -356,17 +386,25 @@ a:hover::before {
 	border-radius: 10px;
 	border: none;
 	background-color: white;
-	padding: 48px;
+	padding: 0 32px;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 .announcements-sep {
 	width: 100%;
 	background-color: rgb(212, 212, 212);
 	height: 1px;
+}
+
+.announcements-post h5 {
+    font-size: 0.9rem;
+}
+
+.announcements-post p {
+    font-size: 0.8rem;
+    color: rgb(99, 99, 99);
 }
 
 .trending {
@@ -376,9 +414,10 @@ a:hover::before {
 	border: none;
 	background-color: white;
 	padding: 48px;
+    padding-left: 32px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	gap: 24px;
 }
 
@@ -389,4 +428,19 @@ a:hover::before {
 
 .trending-user span {
 	display: block;
+}
+
+.trending-user span h5 {
+    font-size: 0.9rem;
+}
+
+.trending-user span p {
+    font-size: 0.8rem;
+    color: rgb(99, 99, 99);
+}
+
+.trending-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
 }
