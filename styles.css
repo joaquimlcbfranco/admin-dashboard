@@ -88,18 +88,6 @@ body {
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-img {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: black;
-}
-
-svg {
-    width: 30px;
-    height: 30px;
-}
-
 /***********/
 /* Sidebar */
 /***********/
@@ -113,7 +101,10 @@ svg {
 }
 
 .sidebar svg {
-    fill: white;
+	width: 30px;
+	height: 30px;
+	fill: white;
+    cursor: pointer;
 }
 
 .sidebar span {
@@ -135,11 +126,11 @@ svg {
 	font-weight: bold;
 	color: white;
 	position: relative;
-    font-family: var(--ubuntu);
+	font-family: var(--ubuntu);
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a::before {
@@ -193,7 +184,7 @@ a:hover::before {
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	padding: 32px;
+	padding: 0 32px;
 }
 
 .header-top-left .search-bar {
@@ -203,17 +194,53 @@ a:hover::before {
 	border: none;
 	background-color: rgb(226, 231, 241);
 	height: 28px;
-    padding-left: 12px;
+	padding-left: 12px;
 }
 
 .header-top-right {
 	grid-area: 1 / 2;
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	padding: 32px;
-	margin-right: 32px;
+	gap: 32px;
+	margin-right: 50px;
 	justify-self: flex-end;
+}
+
+.header-top-left svg,
+.header-top-right svg {
+	width: 30px;
+	height: 30px;
+    cursor: pointer;
+}
+
+.header-top-right img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-top-right a {
+	color: black;
+	font-family: var(--ubuntu);
+	font-weight: bold;
+	font-size: 1.1rem;
+    position: relative;
+}
+
+.header-top-right a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 2px;
+	background-color: black;
+	transition: width 0.2s;
+}
+
+.header-top-right a:hover::before {
+    width: 100%;
 }
 
 .bottom-header {
@@ -226,8 +253,21 @@ a:hover::before {
 	grid-area: 1 / 1;
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	padding: 32px;
+	gap: 24px;
+	padding: 0 32px;
+}
+
+.header-bottom-left img {
+    width: 60px;
+	height: 60px;
+	border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-bottom-left .profile-name {
+    font-size: 20px;
+    font-family: var(--montserrat);
+    font-weight: bold;
 }
 
 .header-bottom-right {
@@ -235,9 +275,23 @@ a:hover::before {
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	padding: 32px;
+	padding: 0 32px;
 	margin-right: 32px;
 	justify-self: flex-end;
+}
+
+.header-bottom-right button {
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: var(--ubuntu);
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(22, 146, 211);
+    cursor: pointer;
 }
 
 /****************/
